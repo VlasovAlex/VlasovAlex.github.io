@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8">
+<TITLE>InformationAboutMe</TITLE>
+<script>
+jQuery(function($){
+   $("#phone").mask("+7 (999) 999-99-99");
+   $("#name").mask("Алексей");
+});
+</script>
+ <style>
+   .leftimg {
+    float:left; 
+    margin: 7px 7px 7px 0; 
+   }
+   .rightimg  {
+    float: right;
+    margin: 7px 0 7px 7px;
+   }
+ </style>
+</head>
+<body>
+<h1><p align="center" style="color:#4682B4; font-size:30px" >Полезная информация обо мне</p></h1>
+<p><img src="https://sun9-20.userapi.com/c858328/v858328187/447ff/fFFagqWhNI4.jpg" width="200" height="280" alt="Моя фотография" class="leftimg" border=2>
+<br></br>
+<h2> Власов Алексей Сергеевич</h2>
+<p><b> Адрес проживания:</b> Знаменская 3, кв.23</p>
+<p><b> Опыт работы:</b> Отсутствует</p>
+<p><b> Телефон:</b> +7-951-807-10-76</p>
+</p>
+<br></br>
+<br></br>
+<p><h1> Знание языков:</h1></p>
+<table align="center" border=10 bordercolor=#4682B4 cellpadding=7 width=700>
+  <thead>
+    <tr>
+      <th>Языки программирования</th>
+      <th>С++</th>
+      <th>С#</th>
+      <th>Java</th>
+	  <th>JavaScript</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Отличное владение</th>
+      <td align="center">Нет</td>
+      <td align="center">Нет</td>
+      <td align="center">Нет</td>
+	  <td align="center">Нет</td>
+    </tr>
+    <tr>
+      <th>Хорошее владение</th>
+      <td align="center">Да</td>
+      <td align="center">Нет</td>
+      <td align="center">Нет</td>
+	  <td align="center">Нет</td>
+    </tr>
+    <tr>
+     <th>Среднее владение</th>
+     <td align="center">Да</td>
+     <td align="center">Да</td>
+     <td align="center">Нет</td>
+	 <td align="center">Нет</td>
+    </tr>
+	<tr>
+     <th>Плохое владение</th>
+     <td align="center">Да</td>
+     <td align="center">Да</td>
+     <td align="center">Да</td>
+	 <td align="center">Да</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="position:absolute;left:40;bottom:45;margin-bottom:45">Телефон:</p>
+<p style="position:absolute;left:40;bottom:30;margin-bottom:30"><input  id="phone" type="text" align="left" placeholder="+7 (999) 999-99-99">
+</p>
+<p style="position:absolute;right:180;bottom:45;margin-bottom:45">Имя:</p>
+<p style="position:absolute;right:40;bottom:30;margin-bottom:30"><input  id="phone" type="text" align="left" placeholder="Алексей">
+</p>
+</body>
+</html>
