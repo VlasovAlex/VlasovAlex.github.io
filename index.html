@@ -1,83 +1,155 @@
-<HTML>
-<HEAD>
-<meta charset="utf-8">
-<TITLE>InformationAboutMe</TITLE>
-<script>
-jQuery(function($){
-   $("#phone").mask("+7 (999) 999-99-99");
-   $("#name").mask("Алексей");
-});
-</script>
- <style>
-   .leftimg {
-    float:left; 
-    margin: 7px 7px 7px 0; 
-   }
-   .rightimg  {
-    float: right;
-    margin: 7px 0 7px 7px;
-   }
- </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<h1><p align="center" style="color:#4682B4; font-size:30px" >Полезная информация обо мне</p></h1>
-<p><img src="https://sun9-20.userapi.com/c858328/v858328187/447ff/fFFagqWhNI4.jpg" width="200" height="280" alt="Моя фотография" class="leftimg" border=2>
-<br></br>
-<h2> Власов Алексей Сергеевич</h2>
-<p><b> Адрес проживания:</b> Знаменская 3, кв.23</p>
-<p><b> Опыт работы:</b> Отсутствует</p>
-<p><b> Телефон:</b> +7-951-807-10-76</p>
-</p>
-<br></br>
-<br></br>
-<p><h1> Знание языков:</h1></p>
-<table align="center" border=10 bordercolor=#4682B4 cellpadding=7 width=700>
-  <thead>
-    <tr>
-      <th>Языки программирования</th>
-      <th>С++</th>
-      <th>С#</th>
-      <th>Java</th>
-	  <th>JavaScript</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Отличное владение</th>
-      <td align="center">Нет</td>
-      <td align="center">Нет</td>
-      <td align="center">Нет</td>
-	  <td align="center">Нет</td>
-    </tr>
-    <tr>
-      <th>Хорошее владение</th>
-      <td align="center">Да</td>
-      <td align="center">Нет</td>
-      <td align="center">Нет</td>
-	  <td align="center">Нет</td>
-    </tr>
-    <tr>
-     <th>Среднее владение</th>
-     <td align="center">Да</td>
-     <td align="center">Да</td>
-     <td align="center">Нет</td>
-	 <td align="center">Нет</td>
-    </tr>
-	<tr>
-     <th>Плохое владение</th>
-     <td align="center">Да</td>
-     <td align="center">Да</td>
-     <td align="center">Да</td>
-	 <td align="center">Да</td>
-    </tr>
-  </tbody>
-</table>
+    <header>
+        <div class="header__top">
+            <div class="conteiner">
+                <div class="header__top-inner">
+                  <a href="https://vk.com/3achem_ti_eto_chitaesh"><img src="images/logo.png" title="logo" alt="logo" id="logo1"> </a>
+                    <div class="header__phone">
+                        <a href="tel">+7-951-807-10-76</a>
+                    </div>
+                    <div class="header__email">
+                    <a href="mailto:vlasov.aleksey.serg@gmail.com?subject=Потенциальный клиент">Vlasov.Aleksey.Serg@gmail.com</a>
+                    </div>
+                    <div class="but_top">
+                        <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__top">Сотрудничество</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="header_btn">
+            <div class="conteiner">
+                <div class="navigacion">
+                    <nav>
+                        <ul>
+                            <li class="navi">Главная</li>
+                            <li class="navi"><a data-fancybox data-src="#resum" href="javascript:;" href="#">Резюме</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div> 
+    </header>
+    <section class="slider">
+            <div class="conteiner">
+                <div class="slider_inner">    
+                    <div class="slider_item">
+                        <div class="slider_item-content">
+                        <div class="slider_title">
+                            Сайт-портфолио
+                        </div>
+                         <div class="slider_text">
+                            С помощью данной страницы можно 
+                            узнать всю информацию обо мне,
+                            а также увидеть часть функционала,
+                            который я способен реализовать.
+                         </div>
+                         <div class="slider_btn">
+                            <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__slider">Связь со мной.</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item-content">
+                        <div class="slider_title">
+                            Мотивация
+                        </div>
+                         <div class="slider_text">
+                             Опыт набираю с начала 10 класса, когда вперые узнал
+                             что такое веб-программирование. На втором курсе института,
+                             я почувствовал огромную тягу к верстке сайтов, и если можно сказать,
+                             к рисованию с помощью програмного кода. 
+                         </div>
+                         <div class="slider_btn">
+                            <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__slider">Связь со мной.</a>
+                        </div>
+                    </div>  
+                    </div>
+                    <div class="slider_item">
+                        <div class="slider_item-content">
+                        <div class="slider_title">
+                            Веб-разработка
+                        </div>
+                         <div class="slider_text">
+                            С огромным рвением берусь за заказы,
+                            так как это мне очень нравится делать.
+                            По сей день изучаю языки для увеличения облати знаний в
+                            веб-программировании.
+                         </div>
+                         <div class="slider_btn">
+                            <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__slider">Связь со мной.</a>
+                        </div>
+                    </div>  
+                    </div>
+            </div>
+        </div>
+        <div class="conteiner">
+        </div>
+    </section>
+    <section class="about__back">
+        <div class="conteiner">
+            <div class="about">
+                <div class="about-inner">
+                    <div class="about__title">
+                        Обо мне.
+                    </div>
+                    <div class="about__text">
+                            Я студент в Южно-Уральском государственном университете,
+                        занимаюсь программированием с 10 класса, веб-программирование увлекло в тоже время.
+                        Более детально про профессиональную деятельность можете посмотреть в резюме.
+                        Живу в Челябинске с рождения,профессионально занимался спортом, увлекаюсь искусством, рисую и занимаюсь музыкой.
+                        Ищу способ реализоваться в этом мире с помощью головы, и проффесиональности.
+                    </div>
+                </div>
+                        <div class="about__image">
+                                <img src="images/about_image.jpg" alt="programist">
+                        </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer class="footer_back">
 
-<p style="position:absolute;left:40;bottom:45;margin-bottom:45">Телефон:</p>
-<p style="position:absolute;left:40;bottom:30;margin-bottom:30"><input  id="phone" type="text" align="left" placeholder="+7 (999) 999-99-99">
-</p>
-<p style="position:absolute;right:180;bottom:45;margin-bottom:45">Имя:</p>
-<p style="position:absolute;right:40;bottom:30;margin-bottom:30"><input  id="phone" type="text" align="left" placeholder="Алексей">
-</p>
+        <div class="conteiner">
+            <div class="footer_inner">
+            <div class="footer__gid">
+                <a href="https://goo.gl/maps/sEd6RhE519TuERWh9">г.Челябинск</a>
+            </div>
+            <div class="fio">
+                <a href="https://vk.com/3achem_ti_eto_chitaesh">Власов А.С.</a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <div style="display: none;" id="modal">
+        <h2>Hello!</h2>
+        <p>You are awesome!</p>
+      </div>
+      <div style="display: none;" id="resum" class="resume">
+        <div class="resume__conteiner">
+       <div class="resume__title">
+           Резюме
+       </div>
+       <div class="resume__text">
+            Занимаюсь вёрсткой сайтов, по желанию заказчика могу выполнить PixelPerfekt работу, либо на мой сугубо вкус по некоторому расположению блоков. Могу выполнить работу без подключения тем с помощью макетов заказчика, без грязного и нечитабельного кода. Вышел на freelance, чтобы набрать большое количество опыта в веб-программировании.Так же с адекватными заказчиками возможно долгосрочное сотрудничество. Как веб-программист хорошо знаю HTML/CSS/JS/PHP/CMS готов изучать дополнительно любые инструменты и языки программирования, чтобы достичь желаемого результата для заказчика. Отзывчивый, исполнительный(заказы завершаю в срок либо раньше срока), Готов полностью отдаться любимому делу.
+      </div>
+    </div>
+    </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/main.js"></script>
 </body>
 </html>
