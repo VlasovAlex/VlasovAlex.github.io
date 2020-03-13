@@ -3,153 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="style/slick.css">
-    <link rel="stylesheet" href="style/fonts.css">
-    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="header__top">
-            <div class="conteiner">
-                <div class="header__top-inner">
-                  <a href="https://vk.com/3achem_ti_eto_chitaesh"><img src="images/logo.png" title="logo" alt="logo" id="logo1"> </a>
-                    <div class="header__phone">
-                        <a href="tel">+7-951-807-10-76</a>
-                    </div>
-                    <div class="header__email">
-                    <a href="mailto:vlasov.aleksey.serg@gmail.com?subject=Потенциальный клиент">Vlasov.Aleksey.Serg@gmail.com</a>
-                    </div>
-                    <div class="but_top">
-                        <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__top">Сотрудничество</a>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+                <div class="header-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
+            <div class="header-content">
+                <div class="header-content__title">
+                    Roadster
+                </div>
+                <div class="header-content__text">
+                    Самый быстрый автомобиль в мире, с рекордным ускорением, дальностью и производительностью.
+                </div>
+                <a href="#" class="button">
+                    Хочу тест драйв
+                </a>
             </div>
         </div>
-        <div class="header_btn">
-            <div class="conteiner">
-                <div class="navigacion">
-                    <nav>
-                        <ul>
-                            <li class="navi">Главная</li>
-                            <li class="navi"><a data-fancybox data-src="#resum" href="javascript:;" href="#">Резюме</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div> 
     </header>
-    <section class="slider">
-            <div class="conteiner">
-                <div class="slider_inner">    
-                    <div class="slider_item">
-                        <div class="slider_item-content">
-                        <div class="slider_title">
-                            Сайт-портфолио
-                        </div>
-                         <div class="slider_text">
-                            С помощью данной страницы можно 
-                            узнать всю информацию обо мне,
-                            а также увидеть часть функционала,
-                            который я способен реализовать.
-                         </div>
-                         <div class="slider_btn">
-                            <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__slider">Связь со мной.</a>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="slider_item">
-                        <div class="slider_item-content">
-                        <div class="slider_title">
-                            Мотивация
-                        </div>
-                         <div class="slider_text">
-                             Опыт набираю с начала 10 класса, когда вперые узнал
-                             что такое веб-программирование. На втором курсе института,
-                             я почувствовал огромную тягу к верстке сайтов, и если можно сказать,
-                             к рисованию с помощью програмного кода. 
-                         </div>
-                         <div class="slider_btn">
-                            <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__slider">Связь со мной.</a>
-                        </div>
-                    </div>  
-                    </div>
-                    <div class="slider_item">
-                        <div class="slider_item-content">
-                        <div class="slider_title">
-                            Веб-разработка
-                        </div>
-                         <div class="slider_text">
-                            С огромным рвением берусь за заказы,
-                            так как это мне очень нравится делать.
-                            По сей день изучаю языки для увеличения облати знаний в
-                            веб-программировании.
-                         </div>
-                         <div class="slider_btn">
-                            <a data-fancybox data-src="#modal" href="javascript:;" href="#" class="button__slider">Связь со мной.</a>
-                        </div>
-                    </div>  
-                    </div>
+    <nav class="menu">
+        <div class="container container-menu">
+            <div class="close-btn"></div>
+            <div class="menu__list">
+                <ul>
+                    <li><a href="#">Узнать цену</a></li>
+                    <li><a href="#">Характеристики</a></li>
+                    <li><a href="#">Тест Драйв</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
             </div>
         </div>
-        <div class="conteiner">
+    </nav>
+    <section class="sleder-top">
+        <div class="slider">
+            <div class="slider__item" style="background-image: url(images/slider-1.jpg);"></div>
+            <div class="slider__item" style="background-image: url(images/slider-2.jpg);"></div>
+            <div class="slider__item" style="background-image: url(images/slider-3.jpg);"></div>
         </div>
     </section>
-    <section class="about__back">
-        <div class="conteiner">
-            <div class="about">
-                <div class="about-inner">
-                    <div class="about__title">
-                        Обо мне.
+    <section class="statistics">
+        <div class="container">
+            <div class="statistics-items">
+                <div class="statistics-item">
+                    <div class="statistics-item__title">
+                        Двигатель
                     </div>
-                    <div class="about__text">
-                            Я студент в Южно-Уральском государственном университете,
-                        занимаюсь программированием с 10 класса, веб-программирование увлекло в тоже время.
-                        Более детально про профессиональную деятельность можете посмотреть в резюме.
-                        Живу в Челябинске с рождения,профессионально занимался спортом, увлекаюсь искусством, рисую и занимаюсь музыкой.
-                        Ищу способ реализоваться в этом мире с помощью головы, и проффесиональности.
+                    <div class="statistics-item__num">
+                        2,1 <span>сек</span>
+                    </div>
+                    <div class="statistics-item__descr">
+                        разгон до 100 км/ч
                     </div>
                 </div>
-                        <div class="about__image">
-                                <img src="images/about_image.jpg" alt="programist">
-                        </div>
+                <div class="statistics-item">
+                    <div class="statistics-item__title">
+                        Батарея
+                    </div>
+                    <div class="statistics-item__num">
+                        1000 <span>км</span>
+                    </div>
+                    <div class="statistics-item__descr">
+                        запас хода
+                    </div>
+                </div>
+                <div class="statistics-item">
+                    <div class="statistics-item__title">
+                        Скорость
+                    </div>
+                    <div class="statistics-item__num statistics-item__num--plus">
+                        400 <span>км/ч</span>
+                    </div>
+                    <div class="statistics-item__descr">
+                        макс скорость
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </section>
-    <footer class="footer_back">
-
-        <div class="conteiner">
-            <div class="footer_inner">
-            <div class="footer__gid">
-                <a href="https://goo.gl/maps/sEd6RhE519TuERWh9">г.Челябинск</a>
-            </div>
-            <div class="fio">
-                <a href="https://vk.com/3achem_ti_eto_chitaesh">Власов А.С.</a>
+    <section class="video">
+        <div class="container">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/tw4jkyfY4HE" frameborder="0"
+             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages-inner">
+                <div class="advantages-inner__row">
+                    <div class="advantages__descr">
+                        <div class="advantages__title">
+                            Скорость
+                        </div>
+                        <div class="advantages__text">
+                            Самый 
+                            быстроразгоняющийся 
+                            серийный автомобиль 
+                            из когда-либо созданных
+                        </div>
+                    </div>
+                    <div class="advantages__img">
+                        <img src="images/advantages-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="advantages-inner__row">
+                    <div class="advantages__img">
+                        <img src="images/advantages-2.jpg" alt="">
+                    </div>
+                    <div class="advantages__descr">
+                        <div class="advantages__text">
+                            <ul>
+                                <li>Датчик дождя</li>
+                                <li>Датчик света</li>
+                                <li>Автопилот</li>
+                                <li>Навигационная система</li>
+                                <li>Обогрев зеркал</li>
+                                <li>Усилитель руля</li>
+                                <li>Панорамная крыша</li>
+                                <li>Ксеноновые фары</li>
+                            </ul>
+                        </div>                        
+                        <div class="advantages__title advantages__title--bottom">
+                            Преимущества
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+    <section class="design">
+        <div class="container">
+            <div class="design__images">
+                <img src="images/section-img2.jpg" alt="">
+            </div>
+            <div class="design-row">
+                <div class="design-row__item">
+                    <div class="design-row__item-num">
+                        01
+                    </div>
+                    <div class="design-row__item-text">
+                        Новый родстер был разработан бывшим дизайнером Mazda Францем фон Хольцхаузеном. 
+                        Имеет съёмную стеклянную крышу и кузов с двумя передними сиденьями плюс два небольших сиденья сзади.
+                    </div>
+                </div>
+                <div class="design-row__item">
+                    <div class="design-row__item-num">
+                        02
+                    </div>
+                    <div class="design-row__item-text">
+                        Родстер имеет три электродвигателя, один спереди и два сзади, 
+                        Они обеспечивают полный привод, а также систему адресного распределения крутящего момента для лучшего прохождения поворотов.                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-btn">
+            <a href="#" class="button">
+                Хочу тест драйв
+            </a>
+        </div>
+        <div class="footer-copy">
+            <ul>
+                <li>Tesla © 2020</li>
+                <li><a href="#">Privacy & Legal </a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Get Newsletter</a></li>
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Locations</a></li>
+            </ul>
+        </div>
     </div>
-    </footer>
-    <div style="display: none;" id="modal">
-        <h2>Hello!</h2>
-        <p>You are awesome!</p>
-      </div>
-      <div style="display: none;" id="resum" class="resume">
-        <div class="resume__conteiner">
-       <div class="resume__title">
-           Резюме
-       </div>
-       <div class="resume__text">
-            Занимаюсь вёрсткой сайтов, по желанию заказчика могу выполнить PixelPerfekt работу, либо на мой сугубо вкус по некоторому расположению блоков. Могу выполнить работу без подключения тем с помощью макетов заказчика, без грязного и нечитабельного кода. Вышел на freelance, чтобы набрать большое количество опыта в веб-программировании.Так же с адекватными заказчиками возможно долгосрочное сотрудничество. Как веб-программист хорошо знаю HTML/CSS/JS/PHP/CMS готов изучать дополнительно любые инструменты и языки программирования, чтобы достичь желаемого результата для заказчика. Отзывчивый, исполнительный(заказы завершаю в срок либо раньше срока), Готов полностью отдаться любимому делу.
-      </div>
-    </div>
-    </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="js/jquery.fancybox.min.js"></script>
-      <script src="js/slick.min.js"></script>
-      <script src="js/main.js"></script>
+</footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

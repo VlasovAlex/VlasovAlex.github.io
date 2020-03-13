@@ -1,8 +1,16 @@
 $(function(){
+    $('.slider').slick({
+    arrows: false,
+    fade: true,
+    autoplay: 3000,
+    dots: true
+    });
 
-        $('.slider_inner').slick({
-        nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
-        prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',              
-        });
+    $('.header-btn').on('click', function(){
+        $('.menu').addClass('active');
+    });
 
+    $('.close-btn').on('click', function(){
+        $('.menu').removeClass('active');
+    });
 });
