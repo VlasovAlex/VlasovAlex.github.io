@@ -1,0 +1,267 @@
+:root {
+    --primary: #c17b88;
+    --secondary: #f9f0f2;
+    --accent: #a85867;
+    --text: #5e5e5e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background: #fffcfd;
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.floral-border {
+    width: 180px;
+    height: 24px;
+    margin: 1rem auto;
+}
+
+.red {
+    background-color: #EAE0C8;
+  }
+  .green {
+    background-color: #EBC2AF;
+  }
+  .blue {
+    background-color: #FADADD;
+  }
+  .yellow {
+    background-color: #EAE0C8;
+  }
+  .sphere {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 500%;
+    position: relative;
+    display: inline-block;
+    margin: 4%;
+  }
+  .sphere::after {
+    content: '';
+    height: 35%;
+    width: 12%;
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    border-radius: 50%;
+    transform: rotate(40deg);
+  }
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    background-image: url("/images/background_header.jpg");
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-title{
+    margin: 18px 0;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw 0;
+}
+
+.main-title span {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    position: relative;
+    text-indent: 1;
+    letter-spacing: 7px;
+    color: #ddcaa0;
+    margin: 0 0 0rem;
+    line-height: 6rem; /* Высота строки */
+    text-shadow: -1px 0 1px #3d392e, 0 1px 1px #474235, 5px 5px 10px rgb(8 8 8 / 40%), -5px -5px 10px rgb(8 8 8 / 40%);
+}
+
+.main-title span+span {
+    font-size: 2vw;
+}
+
+.main-title span:before {
+    content: attr(data-double);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(to bottom, #a19170 14%, #7c6845 16%, #95876a 20%, #938568 22%, #f9e5ab 40%, #58492a 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    text-shadow: none;
+}
+
+.date {
+    margin: 18px 0;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw 0;
+}
+.date span {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    position: relative;
+    text-indent: 1;
+    letter-spacing: 5px;
+    color: #ddcaa0;
+    margin: 0 0 1rem;
+    line-height: 4rem; /* Высота строки */
+    text-shadow: 2px 2px 2px #3a352a, 0 2px 2px #575141, 5px 5px 10px rgb(8 8 8 / 40%), -5px -5px 10px rgb(8 8 8 / 40%);
+}
+
+.date span+span {
+    font-size: 1vw;
+}
+
+.date span:before {
+    content: attr(data-double);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(to bottom, #5e5441 14%, #413624 16%, #615845 20%, #938568 22%, #f9e5ab 40%, #58492a 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    text-shadow: none;
+}
+
+.invitation-card {
+    background: white;
+    padding: 4rem 6rem;
+    margin: 2rem auto 6rem;
+    max-width: 900px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    position: relative;
+}
+
+.photo-placeholder {
+    height: 450px;
+    background-image: url("/images/photo-65.jpg");
+    background-size: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 3rem 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-style: italic;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 4rem 0;
+}
+
+.detail-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-bottom: 3px solid var(--secondary);
+}
+
+.detail-item h3 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    margin: 5rem 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--secondary);
+    border-radius: 12px;
+}
+
+.timeline-time {
+    font-size: 1.8rem;
+    color: var(--primary);
+    min-width: 140px;
+    margin-right: 3rem;
+    font-weight: 500;
+}
+
+.rsvp-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: var(--secondary);
+    margin-top: 4rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    gap: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(193, 123, 136, 0.3);
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .invitation-card {
+        padding: 2rem;
+        margin: -4rem auto 4rem;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    .timeline-time {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+}
