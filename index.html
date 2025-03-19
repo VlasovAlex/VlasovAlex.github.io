@@ -51,8 +51,12 @@
 
         <div class="timeline">
             <h2>План свадебного торжества</h2>
-            <div class="floral-border"></div>
-            
+            <div class="floral-border" style="margin-bottom: 5%;">
+                <div class="sphere red"></div>
+                <div class="sphere green"></div>
+                <div class="sphere blue"></div>
+                <div class="sphere yellow"></div>
+            </div>
             <div class="timeline-item">
                 <div class="timeline-time">16:00</div>
                 <div>
