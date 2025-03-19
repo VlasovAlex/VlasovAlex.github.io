@@ -15,7 +15,7 @@
         </div>
     </section>
     <div class="invitation-card">
-        <h2>We're Getting Married</h2>
+        <h2>С радостью приглашаем вас на нашу свадьбу!</h2>
         <div class="floral-border">
             <div class="sphere red"></div>
             <div class="sphere green"></div>
@@ -24,66 +24,105 @@
             <div class="sphere"></div>
         </div>
         <p class="invitation-text">
-            Salut! We cordially invite you to celebrate our union.<br>
-            Join us as we begin our forever journey together.
+            Вот уже совсем близко этот неповторимый день.<br>
+            Мы уверены в том, что этот день подарит вам радость, а нам семью.
         </p>
 
         <div class="photo-placeholder">
         </div>
         <div class="details-grid">
             <div class="detail-item">
-                <h3>Location</h3>
-                <p>Garden View Estate</p>
-                <p>123 Blossom Lane</p>
+                <h3>Адрес</h3>
+                <p>г. Челябинск</p>
+                <p>ул. Дзержинского, 93</p>
+                <p>зал Версаль</p>
             </div>
             <div class="detail-item">
-                <h3>Date & Time</h3>
-                <p>31 December 2025</p>
-                <p>4:00 PM Sharp</p>
+                <h3>Дата & Время</h3>
+                <p>20 июля 2025</p>
+                <p>Начало 16:00</p>
             </div>
             <div class="detail-item">
-                <h3>Attire</h3>
-                <p>Semi-Formal</p>
-                <p>Pastel Colors Preferred</p>
+                <h3>Дресс-код</h3>
+                <p>Девушки: пастельные тона</p>
+                <p>Мужчины: полуофициальный стиль</p>
             </div>
         </div>
 
         <div class="timeline">
-            <h2>Celebration Agenda</h2>
+            <h2>План свадебного торжества</h2>
             <div class="floral-border"></div>
             
             <div class="timeline-item">
-                <div class="timeline-time">4:00 PM</div>
+                <div class="timeline-time">16:00</div>
                 <div>
-                    <h3>Ceremony Begins</h3>
-                    <p>Outdoor vows under floral arch</p>
+                    <h3>Церемония бракосочетания</h3>
+                    <p>Волнительный момент</p>
                 </div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time">5:30 PM</div>
+                <div class="timeline-time">17:00</div>
                 <div>
-                    <h3>Cocktail Reception</h3>
-                    <p>Signature drinks & canapés</p>
+                    <h3>Банкентная часть торжества</h3>
+                    <p>Застолье и развлечения</p>
                 </div>
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-time">7:00 PM</div>
+                <div class="timeline-time">22:00</div>
                 <div>
-                    <h3>Dinner & Dancing</h3>
-                    <p>Celebration under the stars</p>
+                    <h3>Церемония закрытия торжества</h3>
+                    <p>Очаг и холодный фонтан</p>
                 </div>
             </div>
         </div>
     </div>
 
     <section class="rsvp-section">
-        <h2>Kindly Respond By September 18th</h2>
-        <div class="floral-border"></div>
-        <p>Please confirm your attendance by</p>
-        <p style="margin: 1.5rem 0">September 18th, 2025</p>
-        <a href="mailto:rsvp@sarahpatrick.wedding" class="cta-button">RSVP Now</a>
+        <h2>Ждем ответа на приглашение до 5 июня</h2>
+        <div class="floral-border">
+            <div class="sphere red"></div>
+            <div class="sphere green"></div>
+            <div class="sphere blue"></div>
+            <div class="sphere yellow"></div>
+            <div class="sphere"></div>
+        </div>
+        <p>Пожалуйста отправьте ответ по эл.почте</p>
+        <div id="timedisplay"></div>
+        <a href="mailto:vlasov.aleksey.serg@gmail.com" class="cta-button">Ответить сейчас</a>
     </section>
+    <script type="text/javascript">
+        function getDate()
+        {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var day = date.getDate();
+            var month = date.getMonth()  + 1;
+            var year = date.getFullYear();
+            //По надобности условие ниже повторить с minutes и hours
+            if(seconds < 10)
+            {
+                seconds = '0' + seconds;
+            }
+            if(hours < 10)
+            {
+                hours = '0' + hours;
+            }
+            if(minutes < 10)
+            {й
+                minutes = '0' + minutes;
+            }
+            if(month < 10)
+            {
+                month = '0' + month;
+            }
+
+            document.getElementById('timedisplay').innerHTML = day  + '.' + month  + '.'  + year +  "<br>"  +   hours + ':' + minutes + ':' + seconds;
+        }
+        setInterval(getDate, 0);
+        </script>
 </body>
 </html>
