@@ -68,7 +68,7 @@ body {
     text-align: center;
     padding: 2rem;
     position: relative;
-    background-image: url("/images/background_header.jpg");
+    background-image: url("../images/background_header.jpg");
     background-size: no-repeat;
     background-position: center;
     background-size: cover;
@@ -160,7 +160,7 @@ body {
 
 .photo-placeholder {
     height: 450px;
-    background-image: url("/images/photo-65.jpg");
+    background-image: url("../images/photo-65.jpg");
     background-size: no-repeat;
     background-position: center;
     background-size: cover;
@@ -248,29 +248,86 @@ body {
     box-shadow: 0 8px 20px rgba(193, 123, 136, 0.3);
 }
 
+/* Общие стили для всех устройств */
+#timedisplay {
+    font-size: 2.5rem;
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#timedisplay:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+#timedisplay::before {
+    content: "До создания нашей семьи осталось:";
+    display: block;
+    font-size: 2.0rem;
+    margin-bottom: 12px;
+    color: #5e5e5e;
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Адаптация для мобильных */
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 3.5rem;
+    #timedisplay {
+        font-size: 1.8rem;
+        padding: 15px;
+        margin: 20px 0;
     }
+    
+    #timedisplay::before {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+}
+.personal-greeting h2 {
+    font-family: 'Playfair Display', serif;
+    color: #5d4037;
+    font-size: 2.0rem;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.personal-greeting h2{
+    margin: 18px 0;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw 0;
+}
 
-    .invitation-card {
-        padding: 2rem;
-        margin: -4rem auto 4rem;
-    }
+.personal-greeting h2 span {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    position: relative;
+    text-indent: 1;
+    letter-spacing: 7px;
+    color: #ddcaa0;
+    margin: 0 0 0rem;
+    line-height: 6rem; /* Высота строки */
+    text-shadow: -1px 0 1px #3d392e, 0 1px 1px #474235, 5px 5px 10px rgb(8 8 8 / 40%), -5px -5px 10px rgb(8 8 8 / 40%);
+}
 
-    .details-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+.personal-greeting h2 span+span {
+    font-size: 2vw;
+}
 
-    .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.5rem;
-    }
-
-    .timeline-time {
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
-    }
+.personal-greeting h2 span:before {
+    content: attr(data-double);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(to bottom, #a19170 14%, #7c6845 16%, #95876a 20%, #938568 22%, #f9e5ab 40%, #58492a 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    text-shadow: none;
 }
