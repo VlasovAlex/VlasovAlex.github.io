@@ -262,9 +262,6 @@ body {
       aspect-ratio: auto;
     }
     
-    .collage-item:nth-child(9) {
-      grid-column: span 2;
-    }
     
     /* Сброс скруглений углов */
     .collage-item {
@@ -279,10 +276,20 @@ body {
     /* ..transform: translate(-15%, -15%); */
     z-index: 1;
   }
-  
+  .collage-item:nth-child(1):hover {
+    transform: scale(2.05) translate(25%, 25%);
+  }
+  .collage-item:nth-child(3):hover {
+    transform: scale(2.05) translate(-25%, 25%);
+  }
+  .collage-item:nth-child(4):hover {
+    transform: scale(2.05) translate(25%, -25%);
+  }
   .collage-item:nth-child(6):hover {
     transform: scale(2.05) translate(-25%, -25%);
   }
+
+
 
 /* Детали мероприятия */
 .details-grid {
@@ -311,6 +318,7 @@ body {
 
 .timeline-item {
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     margin-bottom: 2rem;
     padding: 1.5rem;
