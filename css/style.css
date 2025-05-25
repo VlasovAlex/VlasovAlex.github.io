@@ -19,57 +19,27 @@ body {
     overflow-x: hidden;
 }
 
-.floral-border {
-    width: 180px;
-    height: 24px;
-    margin: 1rem auto;
+/* Общие адаптивные стили */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.red {
-    background-color: #FAE7B5;
-  }
-  .green {
-    background-color: #EBC2AF;
-  }
-  .blue {
-    background-color: #FADADD;
-  }
-  .yellow {
-    background-color: #EAE0C8;
-  }
-  .sphere {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 500%;
-    position: relative;
-    display: inline-block;
-    margin: 4%;
-  }
-  .sphere::after {
-    content: '';
-    height: 35%;
-    width: 12%;
-    position: absolute;
-    top: 4%;
-    left: 15%;
-    border-radius: 50%;
-    transform: rotate(40deg);
-  }
-
-
+/* Шапка */
 .hero {
     height: 100vh;
+    min-height: 600px;
+    max-height: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
     position: relative;
-    background-image: url("/images/background_header.jpg");
-    background-size: no-repeat;
+    background-image: url("../images/background_header.jpg");
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -147,143 +117,313 @@ body {
     text-shadow: none;
 }
 
+.personal-greeting h2{
+    margin: 18px 0;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vw 0;
+}
+
+.personal-greeting h2 span {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    position: relative;
+    text-indent: 1;
+    letter-spacing: 7px;
+    color: #ddcaa0;
+    margin: 0 0 0rem;
+    line-height: 6rem; /* Высота строки */
+    text-shadow: -1px 0 1px #3d392e, 0 1px 1px #474235, 5px 5px 10px rgb(8 8 8 / 40%), -5px -5px 10px rgb(8 8 8 / 40%);
+}
+
+.personal-greeting h2 span+span {
+    font-size: 2vw;
+}
+
+.personal-greeting h2 span:before {
+    content: attr(data-double);
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(to bottom, #a19170 14%, #7c6845 16%, #95876a 20%, #938568 22%, #f9e5ab 40%, #58492a 84%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgb(0 0 0 / 0%);
+    text-shadow: none;
+}
+
+/* Декоративные элементы */
+.floral-border {
+    width: 180px;
+    height: 24px;
+    margin: 1rem auto;
+}
+
+.sphere {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 4%;
+    position: relative;
+}
+
+.red { background-color: #FAE7B5; }
+.green { background-color: #EBC2AF; }
+.blue { background-color: #FADADD; }
+.yellow { background-color: #EAE0C8; }
+
+/* Карточка приглашения */
 .invitation-card {
     background: white;
-    padding: 4rem 6rem;
-    margin: 2rem auto 6rem;
+    padding: 2rem;
+    margin: 2rem auto;
     max-width: 900px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     text-align: center;
     position: relative;
+    width: 95%;
 }
 
-.photo-placeholder {
-    height: 450px;
-    background-image: url("/images/photo-65.jpg");
-    background-size: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 3rem 0;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    font-style: italic;
-}
-
-.details-grid {
+/* Фотоколлаж */
+.photo-collage {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin: 4rem 0;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    aspect-ratio: 1 / 1;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .collage-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(193, 123, 136, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Эффекты при наведении */
+  .collage-item:hover {
+    transform: scale(0.95);
+    z-index: 2;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  
+  .collage-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .collage-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Стили для отдельных фото */
+  .collage-item:nth-child(1) {
+    border-radius: 15px 0 0 0;
+  }
+  .collage-item:nth-child(3) {
+    border-radius: 0 15px 0 0;
+  }
+  .collage-item:nth-child(4) {
+    border-radius: 0 0 0 15px;
+  }
+  .collage-item:nth-child(6) {
+    border-radius: 0 0 15px 0;
+  }
+  
+  /* Адаптация для мобильных */
+  @media (max-width: 768px) {
+    .collage-3x3 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      aspect-ratio: auto;
+    }
+    
+    .collage-item:nth-child(9) {
+      grid-column: span 2;
+    }
+    
+    /* Сброс скруглений углов */
+    .collage-item {
+      border-radius: 0 !important;
+    }
+  }
+  
+  /* Альтернативный вариант с разными размерами */
+  .collage-item:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+    /* ..transform: translate(-15%, -15%); */
+    z-index: 1;
+  }
+  
+  .collage-item:nth-child(6):hover {
+    transform: scale(2.05) translate(-25%, -25%);
+  }
+
+/* Детали мероприятия */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
 }
 
 .detail-item {
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
     border-bottom: 3px solid var(--secondary);
 }
 
 .detail-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--accent);
     margin-bottom: 1rem;
 }
 
+/* Таймлайн */
 .timeline {
-    margin: 5rem 0;
+    margin: 3rem 0;
 }
 
 .timeline-item {
     display: flex;
-    align-items: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
     background: var(--secondary);
     border-radius: 12px;
 }
 
 .timeline-time {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--primary);
-    min-width: 140px;
-    margin-right: 3rem;
+    margin-bottom: 1rem;
     font-weight: 500;
 }
 
+/* RSVP секция */
 .rsvp-section {
     text-align: center;
-    padding: 6rem 2rem;
+    padding: 4rem 1rem;
     background: var(--secondary);
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
-.rsvp-section p{
-    font-size: 1.2rem;
+.rsvp-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
 }
 
-.rsvp-section #timedisplay{
-    font-size: 1.2rem;
-    margin: 1.5rem 0;
-}
-.cta-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 1.2rem 3rem;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 35px;
-    font-size: 1.2rem;
-    transition: all 0.3s;
-    gap: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.cta-button:hover {
-    background: var(--accent);
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(193, 123, 136, 0.3);
-}
-
-/* Общие стили для всех устройств */
+/* Таймер */
 #timedisplay {
-    font-size: 2.5rem;
-    margin: 30px 0;
-    padding: 20px;
+    font-size: clamp(2.2rem, 4vw, 2rem);
+    margin: 20px auto;
+    padding: 15px;
     background: rgba(255,255,255,0.95);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
     transition: all 0.3s ease;
-}
-
-#timedisplay:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    max-width: 800px;
+    font-family: 'Great Vibes', cursive;
 }
 
 #timedisplay::before {
     content: "До создания нашей семьи осталось:";
     display: block;
-    font-size: 2.0rem;
-    margin-bottom: 12px;
+    font-size: clamp(2.2rem, 4vw, 2rem);
+    margin-bottom: 10px;
     color: #5e5e5e;
     font-family: 'Great Vibes', cursive;
 }
 
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
-    #timedisplay {
-        font-size: 1.8rem;
-        padding: 15px;
-        margin: 20px 0;
+/* Адаптация для планшетов */
+@media (min-width: 768px) {
+    .invitation-card {
+        padding: 3rem;
     }
     
-    #timedisplay::before {
-        font-size: 1.2rem;
-        margin-bottom: 8px;
+    .timeline-item {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .timeline-time {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        min-width: 120px;
+    }
+}
+
+/* Адаптация для десктопов */
+@media (min-width: 1024px) {
+    .invitation-card {
+        padding: 4rem 6rem;
+        margin: 2rem auto 6rem;
+    }
+    
+    .photo-placeholder {
+        height: 450px;
+        margin: 3rem 0;
+    }
+    
+    .details-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        margin: 4rem 0;
+    }
+    
+    .detail-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .timeline-item {
+        padding: 2rem;
+    }
+    
+    .rsvp-section {
+        padding: 6rem 2rem;
+    }
+}
+
+/* Особые стили для очень маленьких устройств */
+@media (max-width: 480px) {
+    .main-title span {
+        letter-spacing: 3px;
+    }
+    
+    .date span {
+        letter-spacing: 2px;
+    }
+    
+    .sphere {
+        height: 20px;
+        width: 20px;
+        margin: 3%;
     }
 }
