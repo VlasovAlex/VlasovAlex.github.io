@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Екатерина & Алексей - Приглашение для мама и папа невесты</title>
+    <title>Екатерина & Алексей - Приглашение для {{ guest_name }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -13,13 +13,13 @@
             <h1 class="main-title"><span data-double="Екатерина & Алексей">Екатерина & Алексей</span></h1>
             <p class="date"><span data-double="20 Июля 2025">20 Июля 2025</span></p>
             <div class="personal-greeting">
-                <h2><span data-double="Дорогие мама и папа невесты!"> Дорогие мама и папа невесты!</span></h2>
+                <h2><span data-double="Дорогие {{ guest_name }}!"> Дорогая {{ guest_name }}!</span></h2>
             </div>
         </div>
     </section>
     
     <div class="invitation-card">
-        <h2>С радостью приглашаем вас на нашу свадьбу!</h2>
+        <h2>С радостью приглашаем тебя на нашу свадьбу!</h2>
         <div class="floral-border">
             <div class="sphere red"></div>
             <div class="sphere green"></div>
@@ -28,13 +28,8 @@
             <div class="sphere"></div>
         </div>
         <p class="invitation-text">
-            Самый важный день нашей жизни уже совсем близко. Вы — самые любимые и дорогие люди, вложившие столько тепла, заботы и бесконечной любви. <br>
-
-            Вы дали понимание что такое крепкая семья, поддержка. Ваша безграничная вера раскрыла много возможностей в жизне. Вы подарили не только счастливое детство, но и научили ценить каждый момент, быть сильной и не бояться идти к своей мечте.<br>
-            
-            В этот знаменательный день нам так важно, чтобы вы были рядом. Ведь вы — не просто родители, вы — наша опора, наши ангелы-хранители, те, кто всегда согревает сердца добротой и мудростью.<br>
-            
-            Спасибо вам за всё, что вы для нас сделали. Будем ждать вас на нашем празднике, чтобы вместе разделить эту прекрасную радость!<br>
+            Вот уже совсем близко этот неповторимый день.<br>
+            Мы уверены в том, что этот день подарит вам радость и веселье, а нам семью и благополучие.
         </p>
 
         <div class="photo-collage">
@@ -111,7 +106,7 @@
     </div>
 
     <section class="rsvp-section">
-        <h2>Будем рады видеть вас на нашем торждестве!</h2>
+        <h2>Будем рады видеть тебя на нашем торждестве!</h2>
         <div class="floral-border">
             <div class="sphere red"></div>
             <div class="sphere green"></div>
@@ -145,7 +140,7 @@
             seconds = seconds < 10 ? '0' + seconds : seconds;
     
             document.getElementById('timedisplay').innerHTML = 
-                days + " days<br>" + 
+                days + " дней<br>" + 
                 hours + ":" + minutes + ":" + seconds;
         }
     
