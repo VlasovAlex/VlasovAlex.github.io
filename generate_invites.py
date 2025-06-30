@@ -3,11 +3,27 @@ import os
 
 guests = [
     # Друзья
+
     # 'Паравиз и Елена',
     # 'Эдуард и Анна',
     # 'Евгений и Ольга',
     # 'Артур и Ксения',
-    'Ксюнечка',
+    # 'Альберт и Милена',
+
+    # 'Михаил и Анастасия', #Мокины
+    # 'Михаил и Елена', #Цаценко
+    # 'Сергей и София' #Марчук
+    # 'Диана'
+    'Андрей',
+    'Владислав',
+    'Максим',
+    'Сергей', 
+    'Евгений',
+    'Кирилл'
+
+
+
+    # 'Ксюнечка',
     # Сеьмья
 
     # 'Комаровы',
@@ -26,7 +42,7 @@ guests = [
 ]
 
 env = Environment(loader=FileSystemLoader('.'), autoescape=True)
-template = env.get_template('template.html')
+template = env.get_template('template_single_m.html')
 
 output_dir = 'invitations'
 os.makedirs(output_dir, exist_ok=True)
